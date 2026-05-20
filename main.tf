@@ -99,7 +99,4 @@ resource "aws_instance" "web_server" {
     Name = var.instance_name
   }
 }
-  bucket = "my-unique-terraform-bucket-998877" # Bucket names must be globally unique
-  tags   = { Name = "MyBucket" }
-}
 
