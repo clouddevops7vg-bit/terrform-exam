@@ -99,15 +99,7 @@ resource "aws_instance" "web_server" {
     Name = var.instance_name
   }
 }
-  instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.public.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
-
-  tags = { Name = "TerraformInstance" }
-}
-
-# 6. S3 Bucket
-resource "aws_s3_bucket" "data_bucket" {
   bucket = "my-unique-terraform-bucket-998877" # Bucket names must be globally unique
   tags   = { Name = "MyBucket" }
 }
+
